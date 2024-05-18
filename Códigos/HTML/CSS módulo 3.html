@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Módulo 3 CSS</title>
+        <meta charset="UTF-8"/>
+    </head>
+    
+    <body>
+        <style>
+            body {
+                text-align: center;
+            }
+            
+            /*AULA 1: Transforms*/
+            
+            .girar {
+                transform: rotate(45deg);/*Girar 45° positivo*/
+                transform-origin: 25% 75%;/*Isso define a origem da transformação do elemento. Isso é útil quando se quer girar o elemento a partir do canto por exemplo. Essas são coordenadas do eixo x e y. Está setado 25% da esquerda pra direita e 75% de cima pra baixo. O valor padrão dessa propriedade é 50% 50%, o que corresponde ao centro do elemento*/
+            }
+            
+            .mover {
+                transform: translate(50px, 200px);/*Isso move os elementos no eixo x e y*/
+            }
+            
+            .deslocar {
+                transform: skew(45deg);/*Isso desloca o elemento ao longo do eixo x ou y do elemento, dependendo do ângulo*/
+            }
+            
+            .scale {
+                transform: scale(1.5, 1.5);/*Isso aumenta o tamanho do elemento de acordo com os valores fornecidos em width e height. 1 e o tamanho normal, 2 é o dobro do tamanho (eixo x e y)*/
+            }
+            
+            /*AULA 2: Transitions*/
+            
+            .test1 {
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+                transition: width 3s linear;/*Isso define qual a duração que o parâmetro indicado será transitado para o valor definido posteriormente*//*Este valor "linear" define qual a maneira que a transição ocorrerá (linear, ease, ease-in, ease-out, ease-in-out)*/
+            }
+            
+            .test1:active {
+                width: 300px;
+            }
+            
+            .test2 {
+                text-align: center;
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+                border: 10px solid black;
+                margin: 50px;
+                transition: transform 3s ease-in-out;
+            }
+            
+            .test2:active{
+                transform: rotate(720deg);
+            }
+            
+            /*AULA 3: Keyframes*/
+            
+            .test3 {
+                height: 100px;
+                width: 150px;
+                background-color: red;
+                animation-name: anim1;/*Isso aqui é pra basicamente a classe "test3" encontrar a função de animação de mesmo nome*/
+                animation-duration: 8s;/*Essa propriedade define em quanto tempo a  animação será executada*/
+                animation-delay: 2s;/*Como o próprio nome diz, coloca um delay pra animação iniciar*/
+                animation-timing-function: ease-in-out;/*Consultar print de transições de animação pra ver todos os valores possíveis*/
+                animation-iteration-count: 10;/*Isso determina quantas vezes a animação será reproduzida. Para reproduzir em loop infinitamente, basta colocar o valor "infinite"*/
+                animation-direction: alternate;/*Isso define o modo como a animação será reproduzida, de 0% a 100%(normal), reverso (reverse), alternado (alternate) que seria frente trás frente, e alternado reverso(alternate-reverse) que seria trás frente trás.*/
+            }
+            @keyframes anim1 {
+                0%{background-color: red;}
+                10%{width:400px;}
+                30%{height:700px;}
+                50%{background-color: green;}
+                60%{transform:rotate(720deg);}
+                75%{transform:translate(-20px,-100px);}
+                90%{background-color:blue;}
+                100%{background-color:red;}
+            }/*Vc pode basicamente marcar pontos de transição de valor de elementos. 0% é o início da animação e 100% é o fim*/
+            
+            .div1 {
+                height: 100px;
+                width: 150px;
+                background-color: green;
+                transform-origin: 1% 1%;
+                transform: rotate(30deg);
+            }
+            
+            .div2 {
+                height: 100px;
+                width: 150px;
+                background-color: red;
+                transform: skew(45deg, 20deg);
+            }
+            
+            .anim {
+    margin: 200px auto;
+    width: 50px;
+    padding: 50px;
+    background-color: none;
+    transform: skew(0deg);
+    border: 10px solid green;
+    box-shadow: 0px 0px 0px 0px yellow;
+    animation: skew 1s ease infinite alternate;
+}
+@keyframes skew {
+    from {transform: skew(0deg, 0deg); 
+          box-shadow: 0px 0px 0px 0px yellow;
+          background-color: lightgreen;
+       }
+    to {transform: skew(160deg, -160deg); 
+        box-shadow: 2px 5px 100px 30px cyan;
+        background-color: red;
+     }
+}
+            
+        </style>
+        
+        <div class="test1"></div>
+        <div class="test2"></div>
+        <div class="test3"></div>
+        
+    </body>
+    
+</html>

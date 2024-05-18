@@ -1,0 +1,10 @@
+#tab {
+    /*Este margin: auto coloca uma margem na esquerda e direita do elemento de forma equidistante, deixando ele no centro da página.*/
+    margin: auto;
+    border: 2px solid black;
+}
+
+body {
+    /*Isso define a largura máxima do elemento (neste caso o corpo). Isso faz com que os elementos se adaptem com o tamanho da tela*/
+    max-width: 1000px;
+}

@@ -1,0 +1,83 @@
+body{
+    text-align: center;
+    background: linear-gradient(180deg, blue, red, Orange, yellow);/*O parâmetro "deg" define o ângulo do gradiente, que vai de 0 até 360*/
+}
+
+table{
+    border-collapse: collapse;/*Por padrão as células das tabelas possuem um espaço entre elas, e por esse motivo ela acabam ficando com bordas duplas. Isso aqui vai fazer essas bordas duplas colapsarem em uma só*/
+    
+    /*A propriedade"border-collapse: possui 4 valores diferentes possíveis: separate, collapse, initial, inherit.*/
+}
+
+td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;/*Altera o cursor do mouse, indicando que esse elemento é clicável. O valor padrão deste atributo é defaut, transformando o cursor numa seta novamente*/
+}
+
+td:hover { /*A propriedade ":hover" faz com que aconteça alguma coisa (mudar estilo por exemplo) quando passamos o mouse por cima do elemento (clicar, caso for no celular)*/
+    background-color: blue;
+}
+
+.pc{
+    font-size: 30px;
+    background-color: green;
+    color: black;
+    font-family: Arial;
+}
+
+.estilofonte {
+    font-family: "Courier New";
+    font-style: italic;
+}
+
+.outrafont {
+    font-family: "Brush Script MT";
+}
+
+.box {
+    padding: 4px 6px 4px 6px;
+    border: 8px solid black;
+    margin: 5px 2px 5px 2px;
+    position: absolute;/*Isso é útil para sobrepor elementos, colocando um encima do outro, porém seu local de origem não é preservado*/
+    
+}
+
+.caixa {
+    background-size: contain;/*Essa propriedade faz com que a imagem diminua junto com a caixa, porém é preciso ajustar para a imagem ficar correta*/
+    background-image: url('/storage/emulated/0/Códigos/HTML/media/1601166494737.jpg');/*Essa propriedade adiciona uma imagem de fundo*/
+    width: 263px;
+    height: 450px;
+    border: 10px solid blue;
+    margin: 7px 70px 7px 70px;
+    padding: 10px 70px 10px 50px;
+    box-sizing: border-box;/*Essa propriedade faz com que o padding não influencie no tamanho final da caixa*/
+    font-size: 30px;
+    color: white;
+    position: relative;/*Isso serve para mudar a posição de um elemento, porém seu espaço de origem é preservado(nota: o valor colocado, seja left, right, top ou bottom, é a partir dessa direção. Ou seja, se colocar top: 20px, moverá o elemento em 20px a partir do top). Contudo, ele também se sobrepõe a outros elementos*/
+    left: 30px;
+}
+
+#imagem{
+    float: left; /*Isso aqui move os elementos para esquerda ou direita*/
+    margin-right: 10px;
+}
+
+/*Abaixo um exemplo de código para animação de um elemento*/
+
+            #anim {
+  width: 200px;
+  height: 100px;
+  margin-top: 30px;
+  background-color: #32CD32;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }}

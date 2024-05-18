@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Battle for Life homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script>
+      // esta função irá rodar quando o documento carregar 
+      window.onload = function () {
+        // criando alguns elementos em um HTML vazio 
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        
+        //Aparentemente juntando os dois
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+        
+        //Eu pego o elemento HTML com o id "demo" e aplico a função Date(), para exibir a data e hora atual 
+        document.getElementById("demo").innerHTML = "Date : " + Date();
+      }
+      
+      //Mudando o estilo de um elemento.
+      function change(){
+          document.getElementById("p1").style.color = "red";
+      }
+    </script>
+    </head>
+    
+    <body>
+        <!-- Esta função fecha a página web-->
+        <button onclick="window.close()">Fechar</button>
+        
+        <p id="demo"></p>
+        <p id="p1">Hello!!</p>
+        <button onclick="change()">Mudar cor</button>
+    </body>
+    
+</html>

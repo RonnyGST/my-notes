@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <!--O "title" é o título da página ou site. Ele nao aparece dentro do site, mas sim no navegador (tipo o google). Isso facilita na hora de procurar o site e identificar ele no navegador-->
+        <title>Um Teste de código</title>
+        <!--Meta name são palavras chaves para o navegador(tipo o google) poder encontrar o site. Já o content é referente ao que vai ter na página ou site. Tudo isso é para o navegador encontrar seu site na hora de buscar-->
+        <meta name="homenagem,Gelson" content="minha homenagem para meu pai"></meta>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <!-- Basicamente, eu posso fazer todo o meu código CSS no próprio HTML usando a TAG <style>...</style>. Essa TAG não é mostrada no output-->
+        <style>
+            .test {
+                color:purple;
+            }
+            .link {
+                text-decoration: none;
+            }
+        </style>
+    
+        <h1 class="test">Este é apenas um teste de código pra eu colocar em prática tudo o que estou aprendendo</h1>
+        
+        <h3>
+            Tópicos:
+            <a href="#listas" class="link">Listas,</a>
+            <a href="#imagens" class="link">Imagens,</a>
+            <a href="#vid" class="link">Vídeos</a>
+        </h3>
+        
+        <form>
+            <!-- Diferentes tipos de inputs do html-->
+            <label for="text1">Insira um texto:</label>
+            <input type="text" id="tex1" placeholder="Escreva algo..."><br />
+            
+            <input type="radio" id="rad1"><br />
+            
+            <input type="checkbox" id="check1"><br />
+            
+            <label for="em">Email:</label>
+            <input type="email" name="email" id="em" placeholder="example@domain.com"><br />
+            
+            <label for="pass1">Senha:</label>
+            <input type="password" id="pass1" name="pass"><br />
+            
+            <label for="dat">Data:</label>
+            <input type="date" id="dat"><br />
+            
+            <label for="datimloc">Data e hora:</label>
+            <input type="datetime-local" id="datimloc"><br />
+            
+           <label for="mon">Mês:</label>
+            <input type="month" id="mon"><br />
+           
+           <label for="col">Insira uma cor:</label> 
+            <input type="color" id="col"><br />
+            
+            <label for="num">Insira um número:</label>
+            <input type="number" id="num"><br />
+           
+            
+            <input type="range" id="ran"><br />
+            
+            <label for="sea"><img src="https://www.cabodesantoagostinho.pe.leg.br/imagens/lupa.png/image_preview" width="20"></label>
+            <input type="search" id="sea" placeholder="Pesquisa..."><br />
+            
+            <label for="te">Telefone:</label>
+            <input type="tel" id="te"><br />
+            
+            <label for="tim">Tempo:</label>
+            <input type="time" id="tim"><br />
+            
+            <label for="ur">Insira a url:</label>
+            <input type="url" id="ur"><br />
+            
+            <label for="wee">Insira uma semana:</label>
+            <input type="week" id="wee"><br />
+            <input type="reset" id="res"><br />
+            
+            <input type="submit" onclick="alert('ola')"><br />
+            
+            
+        </form>
+        
+        <p><b>Aqui são diferentes tipos </b><i>de formatação de </i><u>texto: bold, itálico e grifado (underline)</u></p>
+        
+        <h1 id="listas">
+            <b>Listas:</b>
+        </h1>
+        
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        
+       <h3>Listas em ordem:</h3>     
+        
+        <ol>
+            <li>1</li>
+            <li>4</li>
+            <li>6</li>
+            <li>7</li>
+        </ol>
+        
+      <h3>Listas sem ordem: ou com espaço kkk</h3>  
+        
+        <ul>
+            <li>s</li>
+            <li>g</li>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        
+       <h3>Listas dentro de listas:</h3> 
+        
+        <ol>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <ul>
+                <li>item a</li>
+                <li>item b</li>
+                <li>item c</li>
+            </ul>
+            <li>item4</li>
+            <li>item5</li>
+        </ol>
+        
+        <h1>Drop down menu</h1>
+        
+        <form>
+            <select>
+                <option>Opção 1</option>
+                <option>Opção 2</option>
+                <option>Opção 3</option>
+            </select>
+        </form>
+        
+        <form>
+            <select>
+                <option>Opção a</option>
+                <option>Opção b</option>
+                <option>Opção c</option>
+            </select>
+        </form>
+        
+        <h1>Links</h1>
+        
+        <button><a href="https://www.youtube.com">Like1</a></button><br />
+        
+        <button><a href="https://br.pinterest.com">Like2</a></button><br />
+        
+        <h2 id="imagens">Imagens:</h2>
+        
+        <img src="https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw59f81f00/images/large/575ffda7a3be1633568b4e08.jpg?sw=341&sh=450&sm=fit"><br>
+        
+        <img src="https://64.media.tumblr.com/abfe3c69b58e30692d9c9d27a0adb3b9/tumblr_pp56cyInw91qi26lwo2_540.gifv" height="280"><br>
+        
+        <img src="https://media.tenor.com/e_oYVqPjObwAAAAC/prince-of-persia-warrior-within-game.gif" height="300"><br>
+        
+        
+        <h2 id="vid">Vídeos:</h2>
+        <!-- A url seria o link do vídeo-->
+        <video controls>
+            <source src="url"
+            type="video/mp4">
+            Video not supported
+        </video><br>
+        
+        <embed
+            src="https://youtube.com/embed/i96F7AYQ33k" height="300" width="400"><br>
+         
+         
+         <footer>
+              <!--footer é o rodapé da página-->
+            <a href="Site teste.html">Outro site</a><br>
+        
+        
+            <a href="#top">Top of the page</a>
+        </footer>
+    </body>
+</html>
